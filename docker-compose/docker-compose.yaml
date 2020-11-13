@@ -17,7 +17,7 @@ services:
   # https://caddyserver.com/docs/caddyfile
   caddy:
     container_name: caddy
-    image: 'index.docker.io/caddy/caddy:alpine@sha256:ef2f47730caa12cb7d0ba944c048b8e48f029d5e0ff861840fa2b8f1868e1966'
+    image: 'index.docker.io/caddy/caddy:alpine@sha256:7017628bfa5340b13297be695101bdc05ba6b8a094aedf917bcc57088720f4b4'
     cpus: 4
     mem_limit: '4g'
     environment:
