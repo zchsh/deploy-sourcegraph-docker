@@ -6,6 +6,13 @@
 - Thinking about how to replicate the instructions SourceGraph gives for AWS config
 - For fun, also to try to learn Terraform, also because I don't enjoy clicking around the AWS UI
 
+## How to use these files to deploy a SourceGraph instance to AWS
+
+- [Install](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) and [configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config) the AWS CLI (version 2).
+- [Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
+- `cd` into this directory, then `cd` into `terraform`
+- Run `terraform apply`
+
 ## Background
 
 - Trying to set up SourceGraph

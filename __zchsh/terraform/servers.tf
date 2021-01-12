@@ -5,6 +5,8 @@ resource "aws_instance" "test-ec2-instance" {
   ami           = "ami-0a0ad6b70e61be944"
   instance_type = "c4.8xlarge"
 
+  associate_public_ip_address = true
+  
   # Set the user_data to our bash setup script
   # ref: https://docs.sourcegraph.com/admin/install/docker-compose/aws
   # TODO: Just echoes "Hello Terraform!" right now, need to set up actual script!

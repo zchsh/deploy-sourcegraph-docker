@@ -2,6 +2,7 @@ resource "aws_subnet" "subnet-uno" {
   cidr_block        = cidrsubnet(aws_vpc.test-env.cidr_block, 3, 1)
   vpc_id            = aws_vpc.test-env.id
   availability_zone = var.availability_zone
+  map_public_ip_on_launch = true
 }
 
 resource "aws_route_table" "route-table-test-env" {
