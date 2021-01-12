@@ -21,7 +21,7 @@ resource "aws_instance" "test-ec2-instance" {
 
   # Add a human-friendly name to the instance
   tags = {
-    Name = "SourceGraph - Linux AMI HVM SSD"
+    Name = "SourceGraph"
   }
 }
   
