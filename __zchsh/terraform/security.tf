@@ -2,9 +2,7 @@ resource "aws_security_group" "ingress-all-test" {
   name   = "allow-all-sg"
   vpc_id = aws_vpc.test-env.id
 
-  // Something to do with the tutorial I couldn't follow
-  // https://medium.com/@hmalgewatta/setting-up-an-aws-ec2-instance-with-ssh-access-using-terraform-c336c812322f
-  // I think this might just be the basic stuff required to even connect via AWS's 
+  // Allow SSH connections on port 22
   ingress {
     from_port   = 22
     to_port     = 22
@@ -32,7 +30,7 @@ resource "aws_security_group" "ingress-all-test" {
     ipv6_cidr_blocks = ["::/0"]
   }
 
-  // Allow outgoing traffic
+  // Allow all outgoing traffic
   // (Terraform removes the default rule)
   egress {
     from_port   = 0

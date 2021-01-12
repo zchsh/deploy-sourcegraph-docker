@@ -79,3 +79,4 @@ Generally, I'm trying to replicate the instructions SourceGraph gives for AWS co
 
 - `associate_public_ip`
   - I think setting this to `true` is the equivalent of SourceGraph's `Auto-assign Public IP` recommendation?
+  - Possibly in conjunction with `map_public_ip_on_launch` on the `aws_subnet` resource?

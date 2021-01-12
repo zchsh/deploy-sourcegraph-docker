@@ -2,6 +2,8 @@ resource "aws_subnet" "subnet-uno" {
   cidr_block        = cidrsubnet(aws_vpc.test-env.cidr_block, 3, 1)
   vpc_id            = aws_vpc.test-env.id
   availability_zone = var.availability_zone
+
+  # Map the public IP to the aws_instance on launch (I think?)
   map_public_ip_on_launch = true
 }
 
