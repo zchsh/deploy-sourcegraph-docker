@@ -69,13 +69,6 @@ Generally, I'm trying to replicate the instructions SourceGraph gives for AWS co
   - I selected the `docker_compose` deployment type
   - The estimator suggested `30` CPUs and `50g` memory
   - I settled on the `c4.8xlarge` `instance_type`, which provides `36` CPUs and `60 GiB` memory
-  
-## Rough notes
 
-- I checked the "AMI ID" for "Amazon Linux 2 AMI (HVM), SSD Volume Type (64-bit x86)" (in the `us-east-2` region)
-- I updated the "AMI ID" in the `.tf` config file accordingly (and added a comment)
-- I looked up the [`associate_public_ip_address` options](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#associate_public_ip_address). I think it meets SourceGraph's ask of `"Ensure the Auto-assign Public IP option is 'Enable'"`
-- I tried setting `user_data` with a basic string. But I found I couldn't connect to my instance in the AWS EC2 dashboard.
-- I decided I should figure out what size of instance I needed.
-
-- I updated the `.tf` file with the `c4.8xlarge` instance type, then re-deployed the infrastructure
+- `associate_public_ip`
+  - I think setting this to `true` is the equivalent of SourceGraph's `Auto-assign Public IP` recommendation?
