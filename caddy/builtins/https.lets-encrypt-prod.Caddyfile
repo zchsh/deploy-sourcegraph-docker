@@ -13,6 +13,8 @@
 #
 
 {
+    # Enable debug mode
+    debug
     email {$SRC_ACME_EMAIL}
 }
 

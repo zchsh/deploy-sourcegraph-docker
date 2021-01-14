@@ -2,6 +2,11 @@
 #
 # Caddyfile documentation: https://caddyserver.com/docs/caddyfile
 
+{
+    # Enable debug mode
+    debug
+}
+
 :80
 
 reverse_proxy {$SRC_FRONTEND_ADDRESSES}
